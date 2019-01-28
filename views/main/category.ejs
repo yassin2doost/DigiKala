@@ -1,0 +1,64 @@
+<% layout('layout') -%>
+
+<head>
+    <title>
+        صفحه محصولات
+    </title>
+</head>
+
+<link rel="stylesheet" href="/css/products.css">
+
+<div class="container">
+        <h3 class="h3"> نسخه نمایشی دیجی کالا:) </h3>
+        <div class="row">
+            <% for (var i = 0; i < 5; i++) { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid7">
+                    <div class="product-image7">
+                            <a href="/product/<%= products[i]._id %>">
+                            
+                            <!-- Sample Picture -->
+                             <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-1.jpg">
+
+                            <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-2.jpg">  
+                            
+
+                            <!--  Server Side where you should work on it just clean the below and put your data :) -->
+                            <!-- <img class="pic-1" src="<%= products[i].image %>">
+
+                            <img class="pic-2" src="<%= products[i].image %>"> -->
+                       
+                            <ul class="social">
+                                    <li><a href="" class="fa fa-search"></a></li>
+                                    <li><a href="" class="fa fa-shopping-bag"></a></li>
+                                    <li><a href="" class="fa fa-shopping-cart"></a></li>
+                                </ul>
+                                <span class="product-new-label ">جدید</span>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#"><%= products[i].name %>  </a></h3>
+                                <h3 class="title"> دسته محصولات :<a href="#"><%= products[i].category.name %>  </a></h3>
+                                <ul class="rating">
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                </ul>
+                                <div class="price">  <%= products[i].price %> ریال
+                                    <span><%= products[i]. price %> هزار تومان</span>
+                                </div>
+                            </div>
+                        </a>
+                    <br/>
+                    <br/>
+                    <br />
+                  
+                </div>
+            </div> 
+            <% } %> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>

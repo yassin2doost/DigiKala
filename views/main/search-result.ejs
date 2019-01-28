@@ -1,0 +1,68 @@
+<% layout('layout') -%>
+
+
+<head>
+    <title>
+        صفحه جستجوی محصولات
+    </title>
+</head>
+
+<link rel="stylesheet" href="/css/products.css">
+
+<div class="container">
+        <h3 class="h3"> نسخه نمایشی دیجی کالا:) </h3>
+        <div class="row">
+            <% if (data.length === 0) { %>            
+                            <h1> متاسفم چیزی پیدا نکردم :(</h1>
+                            <% } else { %>
+                              <div class="col-md-3 col-sm-6">
+                                  <div class="product-grid7">
+                                      <div class="product-image7">
+                              <h3> نتایج جستجوی مربوط به : <h1> <%=  query %> </h1> </h3>
+                            <% for (var i = 0; i < data.length; i++) { %>
+                              <div class="product-image7">
+                           
+                            <ul class="social">
+                                    <li><a href="" class="fa fa-search"></a></li>
+                                    <li><a href="" class="fa fa-shopping-bag"></a></li>
+                                    <li><a href="" class="fa fa-shopping-cart"></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#"><%= data[i]._source.name %>  </a></h3>
+                                <h3 class="title"> دسته محصولات :<a href="#"><%= data[i]._source.category.name %>  </a></h3>
+                                <ul class="rating">
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                </ul>
+                                <div class="price">  <%= data[i]._source.price %> ریال
+                                    <span><%= data[i]._source.price %> هزار تومان</span>
+                                </div>
+                            </div>
+                        </a>
+                    <br/>
+                    <br/>
+                    <br />
+                </div>
+                <% } %>
+            </div> 
+                </div>
+            </div>  
+            <% } %>        
+          </div>
+    </div>
+<hr>
+    
+
+
+
+     
+     
+
+
+
+
+   

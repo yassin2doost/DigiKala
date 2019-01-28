@@ -1,0 +1,28 @@
+<% layout('layout') -%>
+
+<head>
+    <title>
+        دسته ها
+    </title>
+</head>
+
+<div class="container bootstrap snippet">
+  <div class="row">
+    <div class="col-lg-4 col-md-offset-3">
+        <% if(message.length > 0) { %>
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <%= message %>
+            </div>
+            <% } %>
+            <form method="post">
+        <h1 class="list-group-item text-muted"> ویرایش دسته </h1>
+        <label="name"> تغییر نام دسته  :</label>
+        <input type="name" class="form-control" name="name" value="<%= category.name %>" >
+        <button type="submit" class="btn btn-info">  ذخیره تغیرات </button>
+             </form>
+         </div>
+    </div>
+</div>

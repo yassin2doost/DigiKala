@@ -1,0 +1,53 @@
+{
+  "name": "digikala",
+  "version": "1.0.0",
+  "description": "simple but powerful digikala alike e-comerce website ",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass public/css/custom.scss public/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yassin2doost/Digikala.git"
+  },
+  "keywords": [
+    "digikala",
+    "دیجی",
+    "کالا",
+    "دی",
+    "جی",
+    "کالا",
+    "digikala.com"
+  ],
+  "author": "happy student",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yassin2doost/Digikala/issues"
+  },
+  "homepage": "https://github.com/yassin2doost/Digikala#readme",
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "async": "^2.6.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.3",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.16.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "faker": "^4.1.0",
+    "helmet": "^3.15.0",
+    "jsonwebtoken": "^8.4.0",
+    "livereload": "^0.7.0",
+    "mongoosastic": "^4.4.1",
+    "mongoose": "^5.4.3",
+    "mongoose-unique-validator": "^2.0.2",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.11.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "winston": "^3.1.0"
+  }
+}

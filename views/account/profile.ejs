@@ -1,0 +1,121 @@
+<% layout('layout') -%>
+
+<head>
+    <title>پروفایل کاربری <%= user.profile.name %></title>
+  </head>
+  
+  <hr>
+  <div class="container bootstrap snippet">
+      <div class="row">
+            <div class="col-sm-10"><h1>پروفایل کاربری</h1>
+            </div>
+          <div class="col-sm-2">
+              <a href="/logout" class="pull-right">
+            <img title="عکس کاربر" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"/>
+        </a>
+    </div>
+      </div>
+      <div class="row">
+            <div class="col-sm-3">
+                <!--left col-->
+        <div class="text-center">
+          <img class="avatar img-circle img-thumbnail" src="<%= user.profile.image %>"  alt="avatar عکس کاربری دیجیکالا">
+          <h6>عکس خودت و ارسال کن :)</h6>
+          <input type="file" class="text-center center-block file-upload">
+        </div>
+    </hr>
+    <br>
+   
+            <ul class="list-group">
+              <li class="list-group-item text-muted">فعالیت ها <i class="fa fa-dashboard fa-1x"></i></li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong>اشتراک گذاری ها</strong></span> <%= user.profile.Shares %></li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong>پسندیده شده ها</strong></span> <%= user.profile.likes %></li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong>دنبال کنندگان</strong></span> <%= user.profile.following %></li>
+            </ul> 
+                 
+            <div class="panel panel-default">
+              <div class="panel-heading">شبکه های اجتماعی </div>
+              <div class="panel-body">
+                  <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+              </div>
+            </div>
+            
+          </div><!--/col-3-->
+          <div class="col-sm-9">
+            
+                
+            <div class="tab-content">
+              <div class="tab-pane active" id="home">
+                  <hr>
+                    <form class="form" action="##" method="post" id="registrationForm">
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="first_name"><h4> نام و نام خانوادگی</h4></label>
+                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any." value="<%= user.profile.name %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="phone"><h4>شماره تلفن ثابت</h4></label>
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder=" کد استان فراموش نشه :)" title="enter your phone number if any." value="<%= user.profile.phone %>">
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                               <label for="mobile"><h4>شماره موبایل</h4></label>
+                                <input type="text" class="form-control" name="mobile" id="mobile" placeholder=" ۰۹۱۲... " title="enter your mobile number if any." value="<%= user.mobile %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="email"><h4> ایمیل </h4></label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email." value="<%= user.email %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="email"><h4><%= user.profile.address %></h4></label>
+                                <input type="email" class="form-control" id="location" placeholder="دقیقا کجایی ؟" title="enter a location">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="password"><h4>تغییر رمز عبور</h4></label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="**********" title="enter your password.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                              <label for="password2"><h4>تایید رمز عبور جدید</h4></label>
+                                <input type="password" class="form-control" name="password2" id="password2" placeholder="**********" title="enter your password2.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                             <div class="col-xs-12">
+                                  <br>
+                                    <button class="btn btn-lg btn-info" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> ذخیره تغییرات</button>
+                                     
+                              </div>
+                        </div>
+                    </form>
+                
+                <hr>
+                
+              
+               
+
+                </div><!--/tab-pane-->
+            </div><!--/tab-content-->
+  
+          </div><!--/col-9-->
+      </div><!--/row-->
